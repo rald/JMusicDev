@@ -5,8 +5,6 @@ import jm.util.*;
 public final class MyMusic implements JMC {
 	public static void main(String[] args){
 
-		final double LEGATO = 0.95;
-
 		Note[] notes0 = {
 
 			new Note(G4,QN),
@@ -57,8 +55,8 @@ public final class MyMusic implements JMC {
 			new Note(A4,QN),
 			new Note(G4,QN),
 			new Note(F4,QN),
-			new Note(E4,QN*LEGATO),
-			new Note(F4,QN*LEGATO),
+			new Note(E4,QN),
+			new Note(F4,QN),
 			new Note(G4,QN),
 			new Note(C4,QN),
 			new Note(D4,QN),
@@ -66,8 +64,8 @@ public final class MyMusic implements JMC {
 			new Note(F4,QN),
 			new Note(E4,QN),
 			new Note(D4,QN),
-			new Note(D4,QN*LEGATO),
-			new Note(C4,QN*LEGATO),
+			new Note(D4,QN),
+			new Note(C4,QN),
 			new Note(REST,HN),
 
 		};
@@ -122,8 +120,8 @@ public final class MyMusic implements JMC {
 			new Note(A4,QN),
 			new Note(G4,QN),
 			new Note(F4,QN),
-			new Note(E4,HN*LEGATO),
-			new Note(G4,HN*LEGATO),
+			new Note(E4,HN),
+			new Note(G4,HN),
 			new Note(REST,QN),
 			new Note(C4,QN),
 			new Note(D4,QN),
@@ -153,7 +151,7 @@ public final class MyMusic implements JMC {
 		part.addPhrase(phrase4);
 		part.addPhrase(phrase5);
 
-		Score score = new Score("Sa Duyan Ni April",240,part);
+		Score score = new Score("Sa Duyan Ni April",120,part);
 	
 		Write.midi(score,"MyMusic.mid");
 	}
