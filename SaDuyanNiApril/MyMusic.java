@@ -1,5 +1,4 @@
 import jm.JMC;
-import jm.constants.*;
 import jm.music.data.*;
 import jm.util.*;
 
@@ -145,14 +144,16 @@ public final class MyMusic implements JMC {
 		Phrase phrase3 = new Phrase(notes0);
 		Phrase phrase4 = new Phrase(notes1);
 		Phrase phrase5 = new Phrase(notes0);
-		Part part = new Part(MUSIC_BOX);
+
+		Part part = new Part(FLUTE);
 		part.addPhrase(phrase0);
 		part.addPhrase(phrase1);
 		part.addPhrase(phrase2);
 		part.addPhrase(phrase3);
 		part.addPhrase(phrase4);
 		part.addPhrase(phrase5);
-		Score score = new Score("",240,part);
+
+		Score score = new Score("Sa Duyan Ni April",240,part);
 	
 		Write.midi(score,"MyMusic.mid");
 	}
